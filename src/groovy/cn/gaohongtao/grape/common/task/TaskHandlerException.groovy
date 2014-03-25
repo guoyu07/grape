@@ -1,4 +1,4 @@
-package cn.gaohongtao.grape
+package cn.gaohongtao.grape.common.task
 
 import org.slf4j.Logger
 
@@ -6,7 +6,7 @@ import org.slf4j.Logger
  * Created by gaohongtao on 14-3-17.
  */
 class TaskHandlerException extends Exception {
-    private static Logger log = org.slf4j.LoggerFactory.getLogger(TaskHandlerException.class);
+    private static Logger log = LoggerFactory.getLogger(TaskHandlerException.class);
 
     TaskHandlerException(Throwable throwable) {
         this("任务操作出现应处理异常", throwable)
