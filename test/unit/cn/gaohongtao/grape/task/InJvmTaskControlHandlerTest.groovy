@@ -3,7 +3,6 @@ package cn.gaohongtao.grape.task
 import cn.gaohongtao.grape.common.task.TaskHandlerContext
 import cn.gaohongtao.grape.common.task.TaskPipeline
 import cn.gaohongtao.grape.common.task.TaskRunnable
-import com.google.gson.Gson
 
 import static org.junit.Assert.*;
 import org.junit.Before
@@ -49,5 +48,10 @@ class InJvmTaskControlHandlerTest {
         pipeline.fireInactive("test");
         pipeline.fireRemove("test");
         assertNull(pipeline.fireGet("test"));
+    }
+
+    @Test
+    void listAllTask(){
+        assertEquals """[{"name":"test","state":"Inactive","runnable":{"content":"if(context)\\n    context.put(\\"result\\",\\"ok\\");"}}]""",pipeline.fireList();
     }
 }

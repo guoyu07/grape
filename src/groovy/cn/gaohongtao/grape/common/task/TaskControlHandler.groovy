@@ -1,7 +1,7 @@
 package cn.gaohongtao.grape.common.task
 
-import com.sun.istack.internal.NotNull
-import com.sun.istack.internal.Nullable
+import org.jetbrains.annotations.NotNull
+import org.jetbrains.annotations.Nullable
 /**
  * 定义前向操作，由用户触发的相关操作。
  *

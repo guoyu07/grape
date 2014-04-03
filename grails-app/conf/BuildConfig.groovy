@@ -53,6 +53,7 @@ grails.project.dependency.resolution = {
         compile 'org.quartz-scheduler:quartz:2.2.1'
         compile 'com.google.guava:guava:16.0.1'
         compile 'com.google.code.gson:gson:2.2.4'
+        compile 'org.ow2.asm:asm:5.0.1'
     }
 
     plugins {

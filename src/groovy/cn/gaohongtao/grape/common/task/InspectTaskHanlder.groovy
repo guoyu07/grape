@@ -1,5 +1,7 @@
 package cn.gaohongtao.grape.common.task
-import com.sun.istack.internal.NotNull
+
+import org.jetbrains.annotations.NotNull
+
 /**
  * 用于反映任务自身状况的接口
  *
@@ -8,5 +10,7 @@ import com.sun.istack.internal.NotNull
 public interface InspectTaskHanlder {
 
     def get(@NotNull def name);
+
+    def list();
 
 }

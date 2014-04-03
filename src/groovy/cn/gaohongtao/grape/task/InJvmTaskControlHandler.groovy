@@ -7,8 +7,8 @@ import com.google.gson.annotations.Expose
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 
-import com.sun.istack.internal.NotNull
-import com.sun.istack.internal.Nullable
+import org.jetbrains.annotations.NotNull
+import org.jetbrains.annotations.Nullable
 
 import static cn.gaohongtao.grape.common.task.TaskState.*
 
@@ -25,8 +25,6 @@ class InJvmTaskControlHandler implements TaskControlHandler, InspectTaskHanlder 
     private static final Logger log = LoggerFactory.getLogger InJvmTaskControlHandler.class;
 
     private final Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
-
-    private def runtimeContext;
 
     @Override
     TaskControlHandler register(
@@ -123,6 +121,11 @@ class InJvmTaskControlHandler implements TaskControlHandler, InspectTaskHanlder 
         if (result)
             return gson.toJson(result).toString();
         return null;
+    }
+
+    @Override
+    def list() {
+        gson.toJson(taskCache.values()).toString();
     }
 
     private static class Job {

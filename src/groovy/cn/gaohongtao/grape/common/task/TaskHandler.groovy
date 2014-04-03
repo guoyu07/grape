@@ -1,6 +1,6 @@
 package cn.gaohongtao.grape.common.task
 
-import com.sun.istack.internal.NotNull
+import org.jetbrains.annotations.NotNull
 
 
 /**

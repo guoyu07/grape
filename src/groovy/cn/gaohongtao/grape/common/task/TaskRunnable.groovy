@@ -8,6 +8,8 @@ import com.google.gson.annotations.Expose
  */
 class TaskRunnable {
 
+    public static final String TASK_RUNNABLE = "TASK_RUNNABLE";
+
     @Expose
     private final String content;
 

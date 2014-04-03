@@ -1,6 +1,7 @@
 package cn.gaohongtao.grape.common.task
 
 import org.slf4j.Logger
+import org.slf4j.LoggerFactory
 
 /**
  * Created by gaohongtao on 14-3-17.
